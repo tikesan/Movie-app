@@ -42,7 +42,7 @@ Route::middleware(['auth:sanctum', 'verified','role:admin'])->prefix('admin')->n
     Route::resource('/genres', GenreController::class);
     Route::resource('/casts', CastController::class);
     Route::resource('/tags', TagController::class);
-    
+    //ok laravel route
 });
 Route::middleware([
     'auth:sanctum',
