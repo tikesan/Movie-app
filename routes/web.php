@@ -32,7 +32,7 @@ Route::get('/', function () {
     ]);
 });
 Route::middleware(['auth:sanctum', 'verified','role:admin'])->prefix('admin')->name('admin.')->group(function () {
-    Route::get('/admin',function(){
+    Route::get('/admin', function () {
         return Inertia::render('Admin/Index');
     })->name('index');
     Route::resource('/movies', MovieController::class);
@@ -42,7 +42,6 @@ Route::middleware(['auth:sanctum', 'verified','role:admin'])->prefix('admin')->n
     Route::resource('/genres', GenreController::class);
     Route::resource('/casts', CastController::class);
     Route::resource('/tags', TagController::class);
-    //ok laravel route
 });
 Route::middleware([
     'auth:sanctum',
